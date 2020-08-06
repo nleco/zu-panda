@@ -1,0 +1,7 @@
+{
+    "name" : "zu/panda",
+    "description": "Stand-alone Organization video manager.",
+    "require" : {
+        "smarty/smarty": "^3.1"
+    }
+}

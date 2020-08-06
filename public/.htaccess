@@ -1,0 +1,15 @@
+RewriteEngine on
+
+# Disable directory browsing
+Options -Indexes
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+    Order allow,deny
+Deny from all
+</FilesMatch>
+
+RewriteCond %{REQUEST_URI} ^/?(css|js|img)/.* [NC]
+RewriteRule ^(.*)$ $1 [L]
+
+RewriteRule ^(.*)$ index.php?p=$1 [L]
